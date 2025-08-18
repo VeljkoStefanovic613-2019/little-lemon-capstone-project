@@ -72,10 +72,9 @@ export const BookingForm = () => {
           hour12: true
         });
 
-        // Prepare email template parameters
       const templateParams = {
           to_name: formData.name,
-          to_email: formData.email,  // Changed key to match template
+          to_email: formData.email,  
           reservation_date: formattedDate,
           reservation_time: formattedTime,
           number_of_guests: formData.guests,
@@ -259,7 +258,7 @@ export const BookingForm = () => {
                   <button
                     type="submit"
                     disabled={isLoading}
-                    className="w-full bg-primary  hover:bg-yellow-500  text-white font-bold py-3 px-4 rounded-lg transition duration-200 flex items-center justify-center"
+                    className="w-full mt-6 px-6 py-3 bg-primary text-black rounded-full font-semibold hover:bg-yellow-400 transition duration-300"
                   >
                     {isLoading ? (
                       <>
@@ -293,7 +292,7 @@ export const BookingForm = () => {
             </p>
             <button
               onClick={() => setShowModal(false)}
-              className="w-full bg-primary  hover:bg-yellow-500  text-white font-bold py-2 px-4 rounded-lg transition duration-200"
+              className="w-full mt-6 px-6 py-3 bg-primary text-black rounded-full font-semibold hover:bg-yellow-400 transition duration-300"
             >
               Close
             </button>

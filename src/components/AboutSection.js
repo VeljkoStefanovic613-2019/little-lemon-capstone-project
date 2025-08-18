@@ -69,11 +69,10 @@ export const AboutSection = () => {
           </div>
         </div>
 
-        {/* Read More link */}
         <div className="mt-12 text-center">
           <Link 
             to="/about" 
-            className="px-8 py-3 text-lg font-semibold bg-primary text-black  border-2 rounded-lg "
+            className="px-6 py-3 bg-primary text-black rounded-full font-semibold hover:bg-yellow-400 transition duration-300"
           >
             Read More
           </Link>

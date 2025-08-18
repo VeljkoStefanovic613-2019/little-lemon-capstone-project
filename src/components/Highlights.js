@@ -8,7 +8,7 @@ const Highlights = () => {
     <section className="py-12 max-w-7xl mx-auto px-4">
       <div className="flex flex-col items-center sm:flex-row sm:justify-between sm:items-center mb-8 gap-4">
         <h2 className="text-3xl md:text-4xl font-bold font-serif">This Week's Specials</h2>
-        <button className="bg-primary hover:bg-yellow-600 text-black font-bold py-2 px-6 rounded-lg transition-colors duration-300">
+        <button className="mt-6 px-6 py-3 bg-primary text-black rounded-full font-semibold hover:bg-yellow-400 transition duration-300">
           Online Menu
         </button>
       </div>

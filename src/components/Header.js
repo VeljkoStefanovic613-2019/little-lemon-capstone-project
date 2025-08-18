@@ -1,17 +1,17 @@
-import React, { useState } from 'react'
-import logo from "../assets/logo-header.png"
+import React from 'react';
 import { Link, NavLink } from "react-router-dom";
+import { useAuth } from '../context/AuthContext';
+import logo from "../assets/logo-header.png";
 
 export const Header = () => {
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isMenuOpen, setIsMenuOpen] = React.useState(false);
+  const { isLoggedIn, logout } = useAuth();
 
-  // Function to handle NavLink styling
   const navLinkClass = ({ isActive }) => 
     isActive 
       ? "block py-2 px-3 text-white bg-primary rounded-sm md:bg-transparent md:text-primary md:p-0 md:dark:text-primary" 
       : "block py-2 px-3 text-secondary rounded-sm hover:bg-gray-100 md:hover:bg-transparent md:hover:text-primary md:p-0 md:dark:hover:text-primary dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700";
 
-  // Close menu when a link is clicked
   const closeMenu = () => {
     setIsMenuOpen(false);
   };
@@ -21,7 +21,7 @@ export const Header = () => {
       <nav className="bg-white dark:bg-secondary w-full z-20 border-b border-gray-200 dark:border-gray-600">
         <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
           <Link to="/" className="flex items-center space-x-3 rtl:space-x-reverse">
-            <img src={logo} className="h-12" alt="Flowbite Logo" />
+            <img src={logo} className="h-12" alt="Restaurant Logo" />
           </Link>
           <div className="flex space-x-3 md:space-x-0 rtl:space-x-reverse">
             <button 
@@ -54,12 +54,24 @@ export const Header = () => {
                 <NavLink to="/order-online" className={navLinkClass} onClick={closeMenu}>Order Online</NavLink>
               </li>
               <li>
-                <NavLink to="/login" className={navLinkClass} onClick={closeMenu}>Login</NavLink>
+                {isLoggedIn ? (
+                  <button 
+                    onClick={() => {
+                      logout();
+                      closeMenu();
+                    }}
+                    className="block py-2 px-3 text-secondary rounded-sm hover:bg-gray-100 md:hover:bg-transparent md:hover:text-primary md:p-0 md:dark:hover:text-primary dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700"
+                  >
+                    Logout
+                  </button>
+                ) : (
+                  <NavLink to="/login" className={navLinkClass} onClick={closeMenu}>Login</NavLink>
+                )}
               </li>
             </ul>
           </div>
         </div>
       </nav>
     </header>
-  )
-}
+  );
+};

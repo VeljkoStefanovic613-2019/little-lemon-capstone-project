@@ -4,6 +4,7 @@ import { Menu } from "../pages";
 import { Reservations } from "../pages";
 import { OrderOnline } from "../pages";
 import { Login } from "../pages";
+import { Signup } from "../pages";
 
 export const AllRoutes = () => {
   return (
@@ -15,6 +16,7 @@ export const AllRoutes = () => {
         <Route path="reservations" element={<Reservations />} />
         <Route path="order-online" element={<OrderOnline />} />
         <Route path="login" element={<Login />} />
+        <Route path="signup" element={<Signup />} />
     </Routes>
     </>
   )
