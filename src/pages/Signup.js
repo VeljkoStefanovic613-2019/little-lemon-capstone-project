@@ -1,4 +1,3 @@
-// src/pages/Signup.jsx
 import React, { useState } from "react";
 import { useNavigate, Link } from "react-router-dom";
 import { useAuth } from "../context/AuthContext";
@@ -30,7 +29,7 @@ const handleSubmit = async (e) => {
 
   return (
     <div className="min-h-screen flex items-center justify-center">
-      <div className="max-w-md w-full space-y-8">
+      <div className="max-w-md w-full space-y-8 bg-gray-100 p-10 text-center">
         <h2 className="text-3xl font-bold">Sign Up</h2>
         {error && <p className="text-red-500">{error}</p>}
         <form onSubmit={handleSubmit} className="space-y-4">

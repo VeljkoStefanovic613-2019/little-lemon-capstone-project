@@ -10,7 +10,7 @@ export const AboutSection = () => {
           {/* Text content */}
           <div className="lg:w-1/2">
             <div className="max-w-lg">
-              <h1 className="text-5xl font-bold text-primary font-markazi">Little Lemon</h1>
+              <h1 className="text-[3.33rem] font-bold text-primary font-markazi">Little Lemon</h1>
               <h2 className="text-3xl font-semibold text-secondary mt-1">Chicago</h2>
               <p className="text-secondary mt-6 text-lg leading-relaxed">
                 Embrace the captivating allure of Little Lemon Restaurant, a
@@ -25,9 +25,7 @@ export const AboutSection = () => {
             </div>
           </div>
 
-          {/* Images container */}
           <div className="lg:w-1/2">
-            {/* Mobile/Tablet - Stacked images */}
             <div className="lg:hidden flex flex-col items-center gap-6 sm:gap-8">
               <div className="w-full sm:w-4/5 h-64 sm:h-80 rounded-2xl overflow-hidden shadow-lg">
                 <img
@@ -47,7 +45,6 @@ export const AboutSection = () => {
               </div>
             </div>
     
-            {/* Desktop - Overlapping images */}
             <div className="hidden lg:block relative w-full h-80 lg:h-[420px]">
               <div className="absolute md:top-0 md:left-4 md:w-2/3 lg:top-0 lg:left-44 lg:w-3/4 h-4/5 rounded-2xl overflow-hidden shadow-xl">
                 <img

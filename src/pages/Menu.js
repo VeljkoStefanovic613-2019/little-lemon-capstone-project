@@ -8,7 +8,7 @@ import {
   beverages,
   appetizers,
   soups
-} from '../data/data' // Adjust the import path
+} from '../data/data' 
 
 export const Menu = () => {
   const categories = [

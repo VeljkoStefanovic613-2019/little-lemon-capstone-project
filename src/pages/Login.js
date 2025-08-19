@@ -10,7 +10,7 @@ export const Login = () => {
   const [loading, setLoading] = useState(false);
   const navigate = useNavigate();
 
-  // If already logged in, redirect away from login
+ 
   useEffect(() => {
     if (isLoggedIn) navigate("/", { replace: true });
   }, [isLoggedIn, navigate]);
@@ -37,9 +37,9 @@ const handleSubmit = async (e) => {
 
   return (
     <div className="min-h-screen flex items-center justify-center bg-gray-50 py-12 px-4">
-      <div className="max-w-md w-full space-y-8">
+      <div className="max-w-md w-full space-y-8 bg-gray-100 p-10">
         <div className="text-center">
-          <h2 className="mt-6 text-3xl font-extrabold text-gray-900">
+          <h2 className="mt-6 text-3xl font-extrabold text-black">
             Welcome Back
           </h2>
         </div>

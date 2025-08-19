@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { salad, dessert } from "../data/data";
-import { Card } from "./Card"; // adjust path if needed
+import { Card } from "./Card"; 
 
 const MenuSection = () => {
   return (
@@ -44,7 +44,6 @@ const MenuSection = () => {
         </div>
       </div>
 
-      {/* Open Menu button */}
       <div className="flex justify-center mt-12">
         <Link
           to="/menu"

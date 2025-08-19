@@ -6,7 +6,7 @@ export const AuthProvider = ({ children }) => {
   const [user, setUser] = useState(null);
 
   useEffect(() => {
-    // Load user from localStorage if already logged in
+
     const savedUser = localStorage.getItem("user");
     if (savedUser) {
       setUser(JSON.parse(savedUser));

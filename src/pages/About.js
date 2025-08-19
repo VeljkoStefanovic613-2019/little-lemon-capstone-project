@@ -9,7 +9,7 @@ export const About = () => {
     >
       <div className="container mx-auto px-4">
         <div className="flex flex-col lg:flex-row lg:items-center gap-8 lg:gap-12">
-          {/* Text content */}
+          
           <div className="lg:w-1/2">
             <div className="max-w-2xl">
               <div className="inline-block mb-2">
@@ -52,9 +52,9 @@ export const About = () => {
             </div>
           </div>
 
-          {/* Images container - Responsive version */}
+          
           <div className="lg:w-1/2">
-            {/* Mobile/Tablet - Stacked images */}
+            
             <div className="lg:hidden flex flex-col items-center gap-6 sm:gap-8">
               <div className="w-full sm:w-4/5 h-64 sm:h-80 rounded-2xl overflow-hidden shadow-lg">
                 <img
@@ -74,7 +74,7 @@ export const About = () => {
               </div>
             </div>
 
-            {/* Desktop - Overlapping images */}
+            
             <div className="hidden lg:block relative w-full h-80 lg:h-[420px] overflow-x-hidden">
               <div className="absolute md:top-0 md:left-4 md:w-2/3 lg:top-0 lg:left-44 lg:w-3/4 h-4/5 rounded-2xl overflow-hidden shadow-xl">
                 <img

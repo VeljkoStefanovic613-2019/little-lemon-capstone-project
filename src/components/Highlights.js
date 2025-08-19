@@ -1,4 +1,3 @@
-// components/Highlights.js
 import React from "react";
 import { highlights } from "../data/data";
 import {Card} from "./Card";
