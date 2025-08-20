@@ -7,13 +7,12 @@ import GreekSalad from "./greek-salad.jpg";
 import LemonDessert from "./lemon-dessert.jpg";
 import Bruchetta from "./bruchetta.jpg";
 import PastaPrimavera from "./pasta-primavera.jpg";
-import Avatar1 from "./avatar1.jpg";
-import Avatar2 from "./avatar2.jpg";
-import Avatar3 from "./avatar3.jpg";
+import Avatar1 from "./avatar1.png";
+import Avatar2 from "./avatar2.png";
+import Avatar3 from "./avatar3.png";
 import Avatar4 from "./avatar4.jpeg";
-import MarioAdrian1 from "./mario-adrian1.jpg";
-import MarioAdrian2 from "./mario-adrian2.jpg";
-import Restaurant from "./restaurant.jpg";
+import MarioAdrian1 from "./mario-adrian1.png";
+import MarioAdrian2 from "./mario-adrian2.png";
 import CaesarSalad from "./caesar-salad.jpg";
 import QuinoaSalad from "./quinoa-salad.jpg";
 import CapreseSalad from "./caprese-salad.jpg";
@@ -29,12 +28,12 @@ import TomatoBasilSoup from "./tomato-basil-soup.jpg"
 import SpinachArtichokeDip from "./Spinach-Artichoke-Dip-Web.jpg"
 import GarlicBreadsticks from "./FluffyGarlicButterBreadsticks.jpg"
 import CrispyCalamari from "./fried-calamari-recipe.jpg"
-import StuffedMushrooms from "./stuffed-mushrooms.jpg"
+import StuffedMushrooms from "./stuffed-mushrooms.png"
 import HotChocolate from "./Hot-Chocolate-3.jpg"
-import BerrySmoothie from "./blueberry-smoothie.jpg"
+import BerrySmoothie from "./blueberry-smoothie.png"
 import IcedCoffee from "./iced-coffee.jpg"
 import FreshLemonade from "./Lemonade.jpg"
-import ChickenParmesan from "./Baked-Chicken-Parmesan.jpg"
+import ChickenParmesan from "./Baked-Chicken-Parmesan.png"
 import VegetableStirFry from "./Thai-Vegetable-Stir-Fry.png"
 import BeefMedallions from "./Steak-Medallions.jpg"
 import GrilledSalmon from "./grilled-salmon.jpg"
@@ -57,7 +56,6 @@ export {
   Avatar4,
   MarioAdrian1,
   MarioAdrian2,
-  Restaurant,
   CaesarSalad,
   QuinoaSalad,
   CapreseSalad,
