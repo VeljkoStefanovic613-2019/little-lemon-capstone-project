@@ -1,5 +1,6 @@
 import React from "react";
 import heroImage from "../assets/restaurant-food1.png";
+import { Link } from "react-router-dom";
 
 export const HeroSection = () => {
   return (
@@ -16,9 +17,11 @@ export const HeroSection = () => {
               food and classic cocktails in a lively but casual environment. The
               restaurant features a locally-sourced menu with daily specials.
             </p>
+              <Link to="/reservations">
             <button className="mt-6 px-6 py-3 bg-primary text-black rounded-full font-semibold hover:bg-yellow-400 transition duration-300">
               Reserve a table
             </button>
+              </Link>
           </div>
 
           
