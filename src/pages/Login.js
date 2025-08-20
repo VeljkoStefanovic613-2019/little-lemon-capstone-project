@@ -1,39 +1,40 @@
 import React, { useState, useEffect } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { useAuth } from "../context/AuthContext";
+import { Eye, EyeOff } from "lucide-react"; // import eye icons
 
 export const Login = () => {
   const { login, isLoggedIn } = useAuth();
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const [showPassword, setShowPassword] = useState(false); // new state
   const [err, setErr] = useState("");
   const [loading, setLoading] = useState(false);
   const navigate = useNavigate();
 
- 
   useEffect(() => {
     if (isLoggedIn) navigate("/", { replace: true });
   }, [isLoggedIn, navigate]);
 
-const handleSubmit = async (e) => {
-  e.preventDefault();
-  setErr("");
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    setErr("");
 
-  if (!email || !password) {
-    setErr("Please fill in all fields");
-    return;
-  }
+    if (!email || !password) {
+      setErr("Please fill in all fields");
+      return;
+    }
 
-  try {
-    setLoading(true);
-    await login(email, password);
-    navigate("/", { replace: true });
-  } catch (error) {
-    setErr(error.message || "Login failed");
-  } finally {
-    setLoading(false);
-  }
-};
+    try {
+      setLoading(true);
+      await login(email, password);
+      navigate("/", { replace: true });
+    } catch (error) {
+      setErr(error.message || "Login failed");
+    } finally {
+      setLoading(false);
+    }
+  };
 
   return (
     <div className="min-h-screen flex items-center justify-center bg-gray-50 py-12 px-4">
@@ -68,20 +69,27 @@ const handleSubmit = async (e) => {
               />
             </div>
 
-            <div>
+            <div className="relative">
               <label className="block text-sm font-medium text-gray-700 mb-1">
                 Password
               </label>
               <input
-                type="password"
+                type={showPassword ? "text" : "password"} // toggle type
                 autoComplete="current-password"
-                className="block w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-primary focus:border-primary sm:text-sm"
+                className="block w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-primary focus:border-primary sm:text-sm pr-10"
                 placeholder="••••••••"
                 value={password}
                 onChange={(e) => setPassword(e.target.value)}
                 disabled={loading}
                 required
               />
+              <button
+                type="button"
+                onClick={() => setShowPassword(!showPassword)}
+                className="absolute right-3 top-1/2  text-gray-500 hover:text-gray-700"
+              >
+                {showPassword ? <EyeOff className="w-5 h-5" /> : <Eye className="w-5 h-5" />}
+              </button>
             </div>
           </div>
 
