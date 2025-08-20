@@ -38,6 +38,7 @@ import ChickenParmesan from "./Baked-Chicken-Parmesan.jpg"
 import VegetableStirFry from "./Thai-Vegetable-Stir-Fry.png"
 import BeefMedallions from "./Steak-Medallions.jpg"
 import GrilledSalmon from "./grilled-salmon.jpg"
+import BasketIcon from "./Basket.svg"
 
 
 
@@ -81,4 +82,5 @@ export {
   VegetableStirFry,
   BeefMedallions,
   GrilledSalmon,
+  BasketIcon,
 };
