@@ -17,7 +17,7 @@ const getSavedBasket = () => {
 export const BasketProvider = ({ children }) => {
   const [basket, setBasket] = useState(getSavedBasket);
 
-  // Save basket to localStorage whenever it changes
+  
   useEffect(() => {
     localStorage.setItem("restaurantBasket", JSON.stringify(basket));
   }, [basket]);
@@ -26,12 +26,12 @@ export const BasketProvider = ({ children }) => {
     setBasket((prev) => {
       const existing = prev.find((i) => i.id === item.id);
       if (existing) {
-        // If the same item exists, increase quantity
+        
         return prev.map((i) =>
           i.id === item.id ? { ...i, quantity: i.quantity + quantity } : i
         );
       }
-      // Add new item with unique basketId
+      
       return [...prev, { ...item, quantity, basketId: Date.now() }];
     });
   };

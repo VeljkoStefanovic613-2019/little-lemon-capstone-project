@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { useBasket } from "../context/BasketContext";
 import { ShoppingCart } from "lucide-react";
-import BasketModal from "./BasketModal"; // import the modal
+import BasketModal from "./BasketModal"; 
 
 const FloatingBasket = () => {
   const { basket } = useBasket();
@@ -11,7 +11,6 @@ const FloatingBasket = () => {
 
   return (
     <>
-      {/* Floating button */}
       <button
         onClick={() => setOpen(true)}
         className="fixed bottom-6 right-6 bg-primary text-white p-4 rounded-full shadow-lg hover:bg-secondary transition-colors"
@@ -24,7 +23,6 @@ const FloatingBasket = () => {
         )}
       </button>
 
-      {/* Basket Modal */}
       <BasketModal isOpen={open} onClose={() => setOpen(false)} />
     </>
   );

@@ -34,7 +34,7 @@ import {
   GrilledSalmon,
 } from "../assets";
 
-// Highlights
+
 export const highlights = [
   { id: 1, image: GreekSalad, title: "Greek Salad", price: 10.99, description: "The famous greek salad of crispy lettuce, peppers, olives and our Chicago style feta cheese, garnished with crunchy garlic and rosemary croutons.", order: "order a delivery", icon: Bike },
   { id: 2, image: Bruchetta, title: "Bruschetta", price: 12.99, description: "Our Bruschetta is made from grilled bread that has been smeared with garlic and seasoned with salt and olive oil and topped with tomatoes.", order: "order a delivery", icon: Bike },
@@ -74,7 +74,7 @@ export const testimonials = [
   },
 ];
 
-// Order Online
+
 export const salad = [
   { id: 101, image: CaesarSalad, title: "Caesar Salad", price: 9.49, description: "Crisp romaine lettuce tossed with creamy Caesar dressing, garlic croutons, and shaved parmesan cheese. A timeless classic.", order: "order a delivery", icon: Bike },
   { id: 102, image: QuinoaSalad, title: "Quinoa Power Salad", price: 11.25, description: "A hearty mix of tri-color quinoa, chickpeas, cucumber, cherry tomatoes, and avocado with lemon-tahini dressing.", order: "order a delivery", icon: Bike },
@@ -82,7 +82,7 @@ export const salad = [
   { id: 104, image: ThaiChickenSalad, title: "Thai Chicken Salad", price: 12.75, description: "Grilled chicken on a bed of greens, with shredded carrots, bell peppers, peanuts, and spicy peanut dressing.", order: "order a delivery", icon: Bike },
 ];
 
-// Desserts
+
 export const dessert = [
   { id: 201, image: ChocolateMouseDessert, title: "Chocolate Mousse", price: 6.99, description: "A silky smooth chocolate mousse topped with whipped cream and chocolate shavings, perfect for chocolate lovers.", order: "order a delivery", icon: Bike },
   { id: 202, image: StrawberryCheesecakeDessert, title: "Strawberry Cheesecake", price: 7.49, description: "Creamy cheesecake with a buttery graham cracker crust and a sweet strawberry glaze.", order: "order a delivery", icon: Bike },

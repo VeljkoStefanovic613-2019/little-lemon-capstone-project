@@ -7,7 +7,7 @@ export const AboutSection = () => {
     <section className="py-12 px-4 max-w-6xl mx-auto overflow-hidden" id="about">
       <div className="container mx-auto px-4">
         <div className="flex flex-col lg:flex-row lg:items-center gap-8 lg:gap-12">
-          {/* Text content */}
+          
           <div className="lg:w-1/2">
             <div className="max-w-lg">
               <h1 className="text-[3.33rem] font-bold text-primary font-markazi">Little Lemon</h1>

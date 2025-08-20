@@ -10,7 +10,7 @@ const BasketModal = ({ isOpen, onClose }) => {
   const [customerPhone, setCustomerPhone] = useState("");
   const [customerAddress, setCustomerAddress] = useState("");
 
-  // Function to update item quantity
+
   const updateQuantity = (item, change) => {
     if (item.quantity + change <= 0) {
       removeFromBasket(item.basketId || item.id);
@@ -36,7 +36,7 @@ const BasketModal = ({ isOpen, onClose }) => {
   return (
     <div className="fixed inset-0 bg-black/50 flex items-center justify-center z-50 p-2 sm:p-4">
       <div className="bg-white rounded-lg shadow-xl w-full max-w-lg sm:max-w-2xl max-h-[90vh] overflow-hidden flex flex-col">
-        {/* Header */}
+       
         <div className="flex items-center justify-between p-4 sm:p-6 border-b">
           <h2 className="text-lg sm:text-xl font-bold">Your Basket</h2>
           <button
@@ -47,7 +47,7 @@ const BasketModal = ({ isOpen, onClose }) => {
           </button>
         </div>
 
-        {/* Scrollable Content */}
+       
         <div className="overflow-y-auto flex-grow p-4 sm:p-6">
           {confirmed ? (
             <div className="text-center py-10">
@@ -112,7 +112,7 @@ const BasketModal = ({ isOpen, onClose }) => {
                 ))}
               </ul>
 
-              {/* Customer Inputs */}
+            
               <div className="mt-6 space-y-3 sm:space-y-4">
                 <div>
                   <label htmlFor="name" className="block text-sm font-medium mb-1 sm:mb-2">
@@ -181,7 +181,7 @@ const BasketModal = ({ isOpen, onClose }) => {
           )}
         </div>
 
-        {/* Footer */}
+      
         {basket.length > 0 && !confirmed && (
           <div className="p-4 sm:p-6 border-t bg-gray-50">
             <button

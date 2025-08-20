@@ -13,7 +13,7 @@ export const Card = ({
   Icon,
   className = "",
   imageHeight = "h-48",
-  onAddToBasket, // optional callback
+  onAddToBasket, 
 }) => {
   const { addToBasket } = useBasket();
 
@@ -51,7 +51,7 @@ export const Card = ({
             </button>
           )}
 
-          {/* Basket button */}
+          
           <button
             onClick={handleAddToBasket}
             className="bg-primary text-white p-2 rounded-full hover:bg-secondary transition flex items-center justify-center"

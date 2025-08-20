@@ -1,13 +1,13 @@
 import React, { useState, useEffect } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { useAuth } from "../context/AuthContext";
-import { Eye, EyeOff } from "lucide-react"; // import eye icons
+import { Eye, EyeOff } from "lucide-react"; 
 
 export const Login = () => {
   const { login, isLoggedIn } = useAuth();
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const [showPassword, setShowPassword] = useState(false); // new state
+  const [showPassword, setShowPassword] = useState(false); 
   const [err, setErr] = useState("");
   const [loading, setLoading] = useState(false);
   const navigate = useNavigate();
@@ -74,7 +74,7 @@ export const Login = () => {
                 Password
               </label>
               <input
-                type={showPassword ? "text" : "password"} // toggle type
+                type={showPassword ? "text" : "password"} 
                 autoComplete="current-password"
                 className="block w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-primary focus:border-primary sm:text-sm pr-10"
                 placeholder="••••••••"

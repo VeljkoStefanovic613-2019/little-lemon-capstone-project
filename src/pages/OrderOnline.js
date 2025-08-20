@@ -9,10 +9,10 @@ import {
   appetizers,
   soups
 } from '../data/data'
-import { useBasket } from '../context/BasketContext' // Import the basket context
+import { useBasket } from '../context/BasketContext' 
 
 export const OrderOnline = () => {
-  const { addToBasket } = useBasket() // Use the basket context
+  const { addToBasket } = useBasket() 
 
   const categories = [
     { title: "Highlights", items: highlights },
@@ -44,14 +44,14 @@ export const OrderOnline = () => {
                 orderText={item.order}
                 Icon={item.icon}
                 imageHeight="h-60"
-                onAddToBasket={() => addToBasket(item)} // Use context addToBasket
+                onAddToBasket={() => addToBasket(item)} 
               />
             ))}
           </div>
         </section>
       ))}
 
-      {/* Debug basket UI - Updated to work with context */}
+   
      
     </section>
   )
